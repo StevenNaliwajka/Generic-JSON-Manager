@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "GenericJSONManager"
+name = "generic_json_manager"
 version = "0.1"
 description = "A simple JSON creator and manager for Python projects"
 authors = [{name = "Steven Naliwajka", email = "Steven716@live.com"}]
@@ -11,4 +11,4 @@ dependencies = []
 requires-python = ">=3.6"
 
 [tool.setuptools]
-packages = ["GenericJSONManager"]
+packages = ["generic_json_manager"]
