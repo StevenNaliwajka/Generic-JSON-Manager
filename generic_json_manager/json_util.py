@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 
-class GenericJSONManager:
+class JSONUtil:
 
     # Generic Json file manager.
 
