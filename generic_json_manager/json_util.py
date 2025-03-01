@@ -15,7 +15,7 @@ class JSONUtil:
     #GenericJSONManager.create_json("user_data.json", data)
 
     @staticmethod
-    def create_json(file_path, data, overwrite=False):
+    def create_json(file_path: str, data: dict, overwrite:bool = False) -> None:
         file_path = Path(file_path)
 
         # Ensure the directory exists
@@ -33,7 +33,7 @@ class JSONUtil:
             raise TypeError(f"Unable to serialize data: {e}")
 
     @staticmethod
-    def read_json(file_path):
+    def read_json(file_path: str) -> dict:
         file_path = Path(file_path)
 
         if not file_path.exists():
@@ -60,15 +60,14 @@ class JSONUtil:
             return None
 
     @staticmethod
-    def update_json(file_path, new_data):
+    def update_json(file_path:str, new_data:dict) -> None:
         # Not 100% flushed out
-        file_path = Path(file_path)
-        existing_data = GenericJSONManager.read_json(file_path) or {}
+        existing_data = JSONUtil.read_json(file_path) or {}
         existing_data.update(new_data)
-        GenericJSONManager.create_json(file_path, existing_data)
+        JSONUtil.create_json(file_path, existing_data)
 
     @staticmethod
-    def delete_json(file_path):
+    def delete_json(file_path:str) -> None:
         # Not 100% flushed out
         file_path = Path(file_path)
         if file_path.exists():
