@@ -24,9 +24,9 @@ Usage for creating JSON is:
 ```angular2html
     # data to be passed should be in the form.
 data = {
-"name": "Alice",
-"age": 28,
-"skills": ["Python", "Machine Learning", "Data Science"]
+    "name": "Alice",
+    "age": 28,
+    "skills": ["Python", "Machine Learning", "Data Science"]
 }
 ```
 ```angular2html
